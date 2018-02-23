@@ -1,0 +1,37 @@
+/****** FONTS *************/
+
+@font-face {
+	font-family: 'WisdomScript';
+	src: url('../font/WisdomScript/Wisdom-Script-AJ.otf');
+}
+
+/* base styles */
+body {
+	font-family: Montserrat;
+	font-weight: 600;
+}
+
+/********** GRID ************/
+
+.full-width {
+	width: 1200px;
+}
+
+.half-width {
+	width: 600px;
+}
+
+.third-width {
+	width: 398px;
+}
+
+/********* HEADER ***********/
+
+
+
+
+/********** BODY ***********/
+
+
+
+/******* Footer ***********/
