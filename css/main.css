@@ -126,11 +126,12 @@ header #hand-4 {
 #home {
 	height: 668px;
 	background: url("../img/kids-painting-cover.png") no-repeat;
-	background-color: #ebebebeb;
+	background-color: #ebebeb;
 	background-position: bottom;
 	background-size: 1200px;
 	padding-top: 120px;
 }
+
 
 #home #title-start {
 	font-family: 'Caveat Brush', cursive;
