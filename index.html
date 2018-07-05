@@ -9,6 +9,9 @@
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/main.css">
 
+      <!-- JQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
       <!-- Fonts from Google -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
 
@@ -19,13 +22,19 @@
 
     </head>
 
-<!-- ************************************************************ -->
+<!-- *********************************************************** -->
 <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Our Story</a></li>
+        <ul class="drop-menu-array">
+          <li class="drop-menu-container">
+            <a class="drop-menu-title" href="#">Menu</a>
+            <ul class="drop-menu">
+              <li class="drop-menu-item"><a href="#home">Home</a></li>
+              <li class="drop-menu-item"><a href="#about">Our Story</a></li>
+		          <li class="drop-menu-item"><a href="#founder">Our Founder</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <div id="header-icons">
@@ -38,7 +47,7 @@
 
     <!-- ************************************************************ -->
 
-    
+
       <section id="home">
         <div class="full-width-center">
           <h1><span id="title-start">Kid's Gloves </span><span id="title-middle">by</span><span id="title-end"> Artchla</span></h1>
@@ -71,7 +80,22 @@
       </div>
       </section>
 
-    
+	  <section class = "screen-height" id="founder">
+      <div class="full-width-center">
+        <div class="half-width">
+          <h2>Our Founder</h2>
+          <p>Artchla Fay Patroni is a long time mother and leader in the community. Artchla Fay is a stalwart member of her church, and a loving wife. Her vision for the future of children's development is colored with art and education. Working as an art educator for over 23 years, she noticed that paints would stain children's hands during art activities. Parents would complain, and no one really knew what the health ramifications might be.</p>
+          <p>Her solution was fun and effective. Decorated vinyl gloves.</p>
+        </div>
+        <div class="half-width" id="founder-imgs">
+          <img id="fnd-one" class="fade-in" src="./img/artchla-ball.png" alt="Our Founder Artchla">
+          <img id="fnd-two" class="fade-in" src="./img/artchla-victor.jpeg" alt="Artchla and Victor">
+          <img id="fnd-three" class="fade-in" src="./img/artchla-sitting.png" alt="Our Founder Artchla">
+        </div>
+      </div>
+	  </section>
+
+
     <!-- ************************************************************ -->
 
     <footer>
@@ -89,5 +113,10 @@
     </div>
     </footer>
     <!-- ************************************************************ -->
-</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
 </html>

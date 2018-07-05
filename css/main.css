@@ -63,7 +63,7 @@ p {
 /******** HEADER *********/
 header {
 	background: #ff9933;
-	height: 100px;
+	height: 73px;
 	width: 100vw;
 
 	position: fixed;
@@ -72,11 +72,11 @@ header {
 
 nav {
 	float: left;
-	padding-top: 15px;
-	padding-left: 30px;
+	height: 100%;
+	width: 30%;
 }
 
-nav ul li {
+/*nav ul li {
 	display: inline-block;
 	padding-right: 80px;
 }
@@ -86,8 +86,69 @@ nav ul li a {
 	font-size: 26px;
 	color: black;
 	text-decoration: none;
+}*/
+
+/* drop down meny */
+nav .drop-menu-container a, nav .drop-menu-item a {
+	font-family: 'Caveat Brush', cursive;
+	font-size: 26px;
+	color: black;
+	text-decoration: none;
+
+	padding: 20px;
+	display: block;
 }
 
+nav .drop-menu-title a {
+	padding: 34px;
+}
+
+nav ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+nav .drop-menu-container {
+	display: inline-block;
+	border-right: 2px solid #ffca95;
+	width: 100%;
+	text-align: center;
+}
+
+nav ul li:hover {background: #ff5d1a;}
+nav ul li:hover ul {display: block;}
+
+nav .drop-menu {
+  position: absolute;
+  /*width: 200px;*/
+  display: none;
+
+	width: 30%;
+	text-align: center;
+}
+
+nav .drop-menu-item {
+  background: #ff5d1a;
+  display: block;
+	border-radius: 20px;
+	margin-top: 10px;
+
+	width: 100%;
+	text-align: center;
+}
+
+.drop-menu-item a {
+	display:block !important;
+}
+
+.drop-menu-item:hover {
+	background: #FF0000;
+}
+
+
+/* hand icons */
+/* todo: make them spin */
 header #header-icons {
 	float: right;
 	padding-right: 50px;
@@ -95,25 +156,44 @@ header #header-icons {
 
 header #header-icons img {
 	float: right;
+
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
 }
 
+header #header-icons img:hover {
+
+    -ms-transform: rotate(720deg); /* IE 9 */
+		-moz-transform: rotate(720deg); /* Firefox 3.5 */
+		-o-transform: rotate(720deg); /* Opera 10.5 */
+    -webkit-transform: rotate(720deg); /* Safari 3-8 */
+    transform: rotate(720deg);
+}
+
+
 header #hand-1 {
-	padding-top: 35px;
-	padding-right: 70px;
+	margin-top: 25px;
+	margin-right: 70px;
+	width: 40px;
 }
 
 header #hand-2 {
-	padding-top: 10px;
-	padding-right: 20px;
+	margin-top: 4px;
+	margin-right: 20px;
+	width: 55px;
 }
 
 header #hand-3 {
-	padding-top: 30px;
-	padding-right: 40px;
+	margin-top: 6px;
+	margin-right: 40px;
+	width: 50px;
 }
 
 header #hand-4 {
-	padding-top: 10px;
+	margin-top: 10px;
+	width: 50px;
 }
 
 
@@ -207,6 +287,59 @@ header #hand-4 {
 }
 
 
+/********** Founder ***********/
+#founder {
+  background: #ffe3c6;
+  padding-top: 50px;
+  height: 668px;
+}
+
+#founder img {
+  position: relative;
+	width: 200px;
+	/*opacity: 0;
+
+	-webkit-transition: opacity 2s;
+	-o-transition: opacity 2s;
+	-moz-transitioin: opacity 2s;
+	transition: opacity 2s;*/
+}
+
+/*#founder img:hover {
+	opacity: 0;
+}*/
+
+#founder #fnd-one {
+	left: 100px;
+}
+
+#founder #fnd-two {
+	top: 130px;
+	left: 30px;
+}
+
+#founder #fnd-three {
+	top: 20px;
+	left: 60px;
+}
+
+.fade-in {
+	opacity: 1;
+}
+
+
+
+
+
+
+#founder h2, #founder p {
+	padding-right: 125px;
+}
+
+#about h2 {
+	margin-top: 100px;
+}
+
 
 /******* Footer ***********/
 footer {
@@ -234,7 +367,11 @@ footer ul li {
 
 footer ul li a {
   text-decoration: none;
-	color: #541022;
+	color: black;
+}
+
+footer ul li a:hover {
+	color: red;
 }
 
 footer p {
