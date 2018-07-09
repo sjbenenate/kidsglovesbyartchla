@@ -310,17 +310,18 @@ header #hand-4 {
 }*/
 
 #founder #fnd-one {
-	left: 100px;
+	left: 80px;
 }
 
 #founder #fnd-two {
-	top: 130px;
+	top: 140px;
 	left: 30px;
 }
 
 #founder #fnd-three {
-	top: 20px;
-	left: 60px;
+	top: 30px;
+	left: 4	0px;
+	width: 250px;
 }
 
 .fade-in {
