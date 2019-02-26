@@ -11,15 +11,16 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-  
-  
-  <!-- Fonts from Google -->
+
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alef:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -31,9 +32,9 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <!-- Add your site or application content here -->
-  
-  
-<header>
+
+
+  <header class="clearfix">
       <nav>
         <ul class="drop-menu-array">
           <li class="drop-menu-container">
@@ -42,91 +43,88 @@
               <li class="drop-menu-item"><a href="#home">Home</a></li>
               <li class="drop-menu-item"><a href="#about">Our Story</a></li>
 		          <li class="drop-menu-item"><a href="#founder">Our Founder</a></li>
+              <li class="drop-menu-item"><a href="#contact">Get in Touch!</a></li>
             </ul>
           </li>
         </ul>
       </nav>
       <div id="header-icons">
-        <img id="hand-4" src="./img/hand-blue.png" alt="Blue Handprint">
-        <img id="hand-3" src="./img/hand-red.png" alt="Red Handprint">
-        <img id="hand-2" src="./img/hand-purple.png" alt="Purple Handprint">
-        <img id="hand-1" src="./img/hand-green.png" alt="Green Handprint">
+        <img id="hand-4" src="./img/hand-4.png" alt="Blue Handprint">
+        <img id="hand-3" src="./img/hand-3.png" alt="Red Handprint">
+        <img id="hand-2" src="./img/hand-2.png" alt="Purple Handprint">
+        <img id="hand-1" src="./img/hand-1.png" alt="Green Handprint">
       </div>
     </header>
 
     <!-- ************************************************************ -->
 
+    <main class="flex-container">
 
-      <section id="home">
-        <div class="full-width-center">
+      <div id="home" class="full-width flex-container">
+        <div class="main-title">
           <h1><span id="title-start">Kid's Gloves </span><span id="title-middle">by</span><span id="title-end"> Artchla</span></h1>
         </div>
-      </section>
-
-      <section id="logo-page">
-        <div class="full-width-center">
-        <img src="./img/logo.png" alt="Kids Dancing Logo">
-        <h2>Clean up made easy!</h2>
+        <div class="moto">
+          <h2>Clean up made easy!</h2>
+        </div>
       </div>
-      </section>
 
-      <section id="page-2">
-	    <div class="full-width-center">
-          <img src="./img/girl-paint-hands.png" alt="Girl with Finger Paint">
-        </div>
-	  </section>
+      <div class="scroll-space"><div>
 
-      <section class="screen-height" id="about">
-        <div class="full-width-center">
-        <div class="half-width">
-          <img src="./img/girl-painting.png" alt="Girl Painting">
+
+      <div id="about" class="full-width flex-containter">
+        <div class="about-img half-width flex-container">
+          <figure>
+            <img src="./img/girl-painting.png" alt="Girl Painting"/>
+          </figure>
         </div>
-        <div class="half-width" id="story">
+        <div class="about-info half-width flex-container">
           <h2>Our Story</h2>
           <p>Our founder saw that the kids in her grade school class were masters at mess making. This expertise caused much consternation with the parents when one teacher cannot take 15 minutes to wash every kids hands before school is over. This got her thinking on how to run her class smooth, keep parents happy, and still manage many fun (and messy) activites. Add the health concern of snack time and a remedied is mandatory.<br>Enter Artchla gloves, the peel and throw away clean-up.</p>
           <h3>Artchla Gloves make life easy.</h3>
         </div>
       </div>
-      </section>
 
-	  <section class = "screen-height" id="founder">
-      <div class="full-width-center">
-        <div class="half-width">
+
+
+	  <div id="founder" class="full-width flex-container">
+        <div class="founder-content half-width flex-container">
           <h2>Our Founder</h2>
           <p>Artchla Fay Patroni is a long time mother and leader in the community. Artchla Fay is a stalwart member of her church, and a loving wife. Her vision for the future of children's development is colored with art and education. Working as an art educator for over 23 years, she noticed that paints would stain children's hands during art activities. Parents would complain, and no one really knew what the health ramifications might be.</p>
           <p>Her solution was fun and effective. Decorated vinyl gloves.</p>
         </div>
-        <div class="half-width" id="founder-imgs">
+        <div class="founder-imgs half-width">
           <img id="fnd-one" class="fade-in" src="./img/artchla-sitting.png" alt="Our Founder Artchla">
           <img id="fnd-two" class="fade-in" src="./img/artchla-victor.jpeg" alt="Artchla and Victor">
           <img id="fnd-three" class="fade-in" src="./img/artchla-ball.png" alt="Our Founder Artchla">
         </div>
-      </div>
-	  </section>
+	  </div>
+
 
 
     <!-- ************************************************************ -->
 
-
-
-
-    <footer>
-      <div>
-      <div id="contact-info">
+    <footer class="full-width flex-container">
+      <div class="half-width" id="contact">
+        <h2>Get In Touch!</h2>
         <ul>
-          <li><a href="tel:1-503-490-8966">1-503-490-8966</a></li>
-          <li><a href="mailto:artchlapatroni@comcast.net">ArtchlaPatroni@comcast.net</a></li>
+          <li><a href="tel:1-503-490-8966"><i class="fas fa-phone"></i>1-503-490-8966</a></li>
+          <li><a href="mailto:artchlapatroni@comcast.net"><i class="fas fa-envelope"></i>ArtchlaPatroni@comcast.net</a></li>
         </ul>
       </div>
-      <div id="address">
+  <!--    <div id="address">
         <p>1169 N.E. 65th Avenue<br>Portland, OR 97213</p>
+      </div>  -->
+      <div class="dancing-logo half-width">
+        <img src="./img/logo.png" alt="Kids Dancing Logo">
       </div>
-      <div style="clear: both"></div>
-      </div>
+
     </footer>
+
+  </main>  <!-- flex container -->
     <!-- ************************************************************ -->
 
-   
+
 
 
 

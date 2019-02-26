@@ -102,14 +102,12 @@ textarea {
 
 /********** base styles ************/
 
-section {
-	margin: 0;
-	padding: 0;
-}
-body {
+
+html, body {
 	font-family: 'Open Sans',sans-serif;
 	font-weight: 600;
 	font-size: 18px;
+  height: 100%;
 }
 
 h1 {
@@ -134,59 +132,76 @@ p {
 	line-height: 30px;
 }
 
-/********** GRID ************/
-
-.full-width-center{
-	width: 1200px;
-	margin: 0 auto!important;
-  float: none!important;
+img, figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.full-width {
-	width: 1200px;
+::selection{
+  background: orange;
 }
+
+a:hover {
+	color: orange;
+}
+
+/********** GRID and Fexbox structure ************/
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -moz-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+
+.full-width{
+  width: 100%;
+	/*max-width: 1200px;*/
+}
+
 
 .half-width {
-	width: 600px;
-	float: left;
+	width: 100%;
 }
 
-.third-width {
-	width: 398px;
-	float: left;
-}
 
-.screen-height {
-	height: 768px;
-}
 
 /******** HEADER *********/
 header {
-	background: #ff9933;
-	height: 73px;
-	width: 100vw;
+	background: #ffe3c6;
+  border-bottom: 10px solid #ffc17c;
+	/*height: 10%;*/
+	width: 100%;
 
-	position: fixed;
-	top: 0px;
+	/*position: fixed;
+	top: 0px;*/
 }
 
 nav {
 	float: left;
 	height: 100%;
-	width: 30%;
+	width: 100%;  /* 30% for desktop */
 }
-
-/*nav ul li {
-	display: inline-block;
-	padding-right: 80px;
-}
-
-nav ul li a {
-	font-family: 'Caveat Brush', cursive;
-	font-size: 26px;
-	color: black;
-	text-decoration: none;
-}*/
 
 /* drop down meny */
 nav .drop-menu-container a, nav .drop-menu-item a {
@@ -224,7 +239,7 @@ nav .drop-menu {
   /*width: 200px;*/
   display: none;
 
-	width: 30%;
+	width: 100%;   /* 30% for desktop */
 	text-align: center;
 }
 
@@ -263,6 +278,7 @@ header #header-icons img {
 	transition: 1s;
 }
 
+/* the spin part */
 header #header-icons img:hover {
 
     -ms-transform: rotate(720deg); /* IE 9 */
@@ -296,20 +312,28 @@ header #hand-4 {
 	width: 50px;
 }
 
+/********** Background cover images ***********/
 
+main {
+  background: url("../img/girl-paint-hands.png") contain no-repeat;
+  background: fuchsia;
+  /*background: url("../img/kids-painting-cover.png") no-repeat;*/
+  /*position: fixed;
+*/
+}
 
-
-
+.scoll-space {
+    height: 20px;
+}
 
 
 /********** HOME ***********/
 #home {
-	height: 668px;
-	background: url("../img/kids-painting-cover.png") no-repeat;
-	background-color: #ebebeb;
-	background-position: bottom;
-	background-size: 1200px;
-	padding-top: 120px;
+/*	background: url("../img/kids-painting-cover.png") no-repeat;*/
+	/*background-position: bottom;*/
+/*	padding-top: 120px;*/
+
+  background: #fff;
 }
 
 
@@ -325,76 +349,48 @@ header #hand-4 {
 
 #home #title-end {
 	font-family: 'Macondo Swash Caps', cursive;
-	font-size: 130px;
+	font-size: 2em;
 }
 
-#home img {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+#title-start, #title-middle, #title-end {
+  display: block;
 }
 
-
-
-/********** LOGO SECTION ***********/
-#logo-page {
-	background-color: #ebebeb;
-}
-
-#logo-page img {
-	display: block;
-	margin: 0 auto ;
-	width: 35%;
-}
-
-#logo-page h2 {
-	margin-bottom: 0;
-}
-
-/********** PICTURE ***********/
-
-#page-2 {
-	background-color: #ebebeb;
-	height: 651.8px;
-}
-
-#page-2 img {
-	width: 1200px;
-}
 
 
 
 /********** ABOUT ***********/
 #about {
-	background: #ff9933;
-	padding-top: 50px;
-	height: 668px;
-}
+	background: #ffe3c6;
+  border: 10px solid #ffc17c;
+  border-left: none;
+  border-right: none;
+/*	padding-top: 50px;*/
 
-#about img {
-	display: block;
-	margin: 60px auto 0 auto;
+#about .about-img figure {
+/*	display: block;
+	margin: 60px auto 0 auto;*/
 	width: 50%;
+  display: none;
+}
 }
 
-#about h2, #about h3, #about p {
+/*.about-info h2, .about-info h3, .about-info p {
 	padding-right: 125px;
-}
+}*/
 
-#about h2 {
+/*#about h2 {
 	margin-top: 100px;
-}
+}*/
 
 
 /********** Founder ***********/
 #founder {
-  background: #ffe3c6;
+  background: #fff;
   padding-top: 50px;
-  height: 668px;
 }
 
-#founder img {
+.founder-imgs img {
   position: relative;
 	width: 200px;
 	/*opacity: 0;
@@ -444,19 +440,16 @@ header #hand-4 {
 
 /******* Footer ***********/
 footer {
-	position: fixed;
-	bottom: 0px;
-	width: 100vw;
+  border-top: 10px solid #ffe3c6;
+  padding: 5% 0;
 }
 
 #contact-info {
-	float: left;
-	margin-left: 20px;
+
 }
 
 #address {
-	float: right;
-	padding-right: 80px;
+
 }
 
 footer ul li {
@@ -471,9 +464,9 @@ footer ul li a {
 	color: black;
 }
 
-footer ul li a:hover {
+/*footer ul li a:hover {
 	color: red;
-}
+}*/
 
 footer p {
 	text-align: right;
@@ -579,6 +572,54 @@ footer p {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .half-width {
+    width: 50%;
+  }
+
+  nav {
+    width: 30%;
+  }
+
+
+  #home {
+    margin-bottom: 300px;
+  }
+
+  #home #title-start {
+  	font-family: 'Caveat Brush', cursive;
+  	font-size: 72px;
+  }
+
+  #home #title-middle {
+  	font-family: 'Caveat Brush', cursive;
+  	font-size: 40px;
+  }
+
+  #home #title-end {
+  	font-family: 'Macondo Swash Caps', cursive;
+  	font-size: 2em;
+  }
+
+  #title-start, #title-middle, #title-end {
+    display: inline;
+  }
+
+  .moto h2 {
+    font-size: 2.75em;
+  }
+
+  /* about */
+  #about .about-img figure{
+    display: block;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 940px) {
+
+}
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
