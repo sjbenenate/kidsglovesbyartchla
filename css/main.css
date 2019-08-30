@@ -34,44 +34,65 @@ p {
 	line-height: 30px;
 }
 
+img {
+  width: auto;
+}
+
 /********** GRID ************/
 
-.full-width-center{
+/*.full-width-center{
 	width: 1200px;
 	margin: 0 auto!important;
   float: none!important;
+}*/
+
+.full-width-center{
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  max-width: 1200px;
+  margin: auto;
 }
 
 .full-width {
-	width: 1200px;
+  flex-basis: 100%;
 }
 
 .half-width {
-	width: 600px;
-	float: left;
+	flex-basis: 50%;
 }
 
 .third-width {
-	width: 398px;
-	float: left;
+	flex-basis: 33.3333%;
 }
 
 .screen-height {
 	height: 768px;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 /******** HEADER *********/
 header {
 	background: #ff9933;
 	height: 100px;
-	width: 100vw;
+	width: 100%;
 
 	position: fixed;
 	top: 0px;
+  
+  display: flex;
+  justify-content: space-between;
 }
 
 nav {
-	float: left;
 	padding-top: 15px;
 	padding-left: 30px;
 }
@@ -89,12 +110,12 @@ nav ul li a {
 }
 
 header #header-icons {
-	float: right;
 	padding-right: 50px;
 }
 
 header #header-icons img {
 	float: right;
+  width: auto;
 }
 
 header #hand-1 {
@@ -124,15 +145,23 @@ header #hand-4 {
 
 /********** HOME ***********/
 #home {
-	height: 668px;
-	background: url("../img/kids-painting-cover.png") no-repeat;
-	background-color: #ebebeb;
-	background-position: bottom;
-	background-size: 1200px;
-	padding-top: 120px;
+  padding-top: 100px;
+  background-color: #ebebeb;
 }
 
+#home .full-width-center {
+  margin-top: 0px;
+  height: 668px;
+  background: url("../img/kids-painting-cover.png") no-repeat;
+	background-color: #ebebeb;
+	background-position: bottom;
+  background-size: contain;
+  width: 100%;
+}
 
+#home .title {
+  align-self: flex-start;
+}
 #home #title-start {
 	font-family: 'Caveat Brush', cursive;
 	font-size: 72px;
@@ -148,18 +177,16 @@ header #hand-4 {
 	font-size: 130px;
 }
 
-#home img {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
 
 
 /********** LOGO SECTION ***********/
 #logo-page {
 	background-color: #ebebeb;
+  padding: 50px 0;
+}
+
+#logo-page .full-width-center {
+  flex-direction: column;
 }
 
 #logo-page img {
@@ -176,11 +203,10 @@ header #hand-4 {
 
 #page-2 {
 	background-color: #ebebeb;
-	height: 651.8px;
 }
 
 #page-2 img {
-	width: 1200px;
+	width: 100%;
 }
 
 
@@ -188,23 +214,25 @@ header #hand-4 {
 /********** ABOUT ***********/
 #about {
 	background: #ff9933;
-	padding-top: 50px;
-	height: 668px;
+  padding: 30px 5px;
+}  
+
+#about .about-image-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
 }
 
-#about img {
-	display: block;
-	margin: 60px auto 0 auto;
-	width: 50%;
+#about #story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 2;
+  padding: 0 10px;
+  flex-basis: 45%;
 }
 
-#about h2, #about h3, #about p {
-	padding-right: 125px;
-}
-
-#about h2 {
-	margin-top: 100px;
-}
 
 
 
@@ -240,4 +268,75 @@ footer ul li a {
 footer p {
 	text-align: right;
 	font-size: 20px;
+}
+
+
+
+
+/*********** SCREEN SIZE QUERIES *************/
+
+@media only screen and (max-width: 780px) {
+  #hand-2 {
+    display: none;
+  }
+  
+  nav {
+    padding: 0;
+  }
+  
+  #home .full-width-center {
+    height: 560px;
+  }
+  
+}
+  
+@media only screen and (max-width: 600px) {
+  .half-width, .third-width {
+    flex-basis: 100%;
+  }
+  
+  
+  header #header-icons {
+    padding-right: 10px;
+  }
+  
+  header #header-icons img {
+    width: 25px;
+    padding-right: 3px;
+    padding-top: 3px;
+  }
+
+  #home .full-width-center {
+    height: 400px;
+  }
+  
+  #home .full-width-center {
+    height: 400px;
+  }
+    
+  #home #title-start {
+    font-size: 55px;
+  }
+
+  #home #title-middle {
+    font-size: 25px;
+  }
+
+  #home #title-end {
+    font-size: 85px;
+  }
+  
+  #logo-page img {
+    width: 50%;
+  }
+  
+  #about #story {
+    order: 1;
+    padding: 0 4px;
+    flex-basis: 100%;
+  }
+  
+  #about .about-image-half {
+    order: 2;
+  }
 }
